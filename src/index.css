@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #1565C0;
+  --blue-dark: #0E4A93;
+  --gold: #C9A84C;
+  --white: #FFFFFF;
+  --off: #F4F6F9;
+  --ink: #111111;
+  --ink-2: #555555;
+  --line: #E6E9EE;
+  --ph-grey: #AAAAAA;
+  --footer: #0D0D0D;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar { width: 0; height: 0; display: none; }
+body { scrollbar-width: none; }
+body::-webkit-scrollbar { display: none; }
+
+body.is-locked { overflow: hidden; }
