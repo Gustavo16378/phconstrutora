@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { useScrollDirection } from '../hooks/useScrollDirection'
+import logo from '../assets/logo.jpeg'
 
 const NAV_LINKS = [
   { href: '#sobre',       label: 'Sobre',           section: 'sobre' },
@@ -122,9 +123,8 @@ export default function Navbar() {
       >
         {/* Drawer header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-          <a href="#top" onClick={close} style={{ display: 'flex', alignItems: 'baseline', gap: '8px', textDecoration: 'none' }}>
-            <span style={{ color: '#1565C0', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.01em', fontFamily: 'inherit' }}>PH</span>
-            <span style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, fontSize: '12px', letterSpacing: '0.22em', textTransform: 'uppercase', fontFamily: 'inherit' }}>Construtora</span>
+          <a href="#top" onClick={close} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src={logo} alt="PH Construtora" style={{ height: '38px', width: 'auto', display: 'block', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
           </a>
           <button
             onClick={close}
@@ -201,9 +201,8 @@ export default function Navbar() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '24px' }}>
 
           {/* Logo */}
-          <a href="#top" style={{ display: 'flex', alignItems: 'baseline', gap: '8px', textDecoration: 'none', flexShrink: 0 }}>
-            <span style={{ color: '#1565C0', fontWeight: 800, fontSize: '24px', letterSpacing: '-0.01em', fontFamily: 'inherit' }}>PH</span>
-            <span style={{ color: '#111', fontWeight: 500, fontSize: '13px', letterSpacing: '0.22em', textTransform: 'uppercase', fontFamily: 'inherit' }}>Construtora</span>
+          <a href="#top" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+            <img src={logo} alt="PH Construtora" style={{ height: '44px', width: 'auto', display: 'block', objectFit: 'contain' }} />
           </a>
 
           {/* Desktop nav (centered) */}
