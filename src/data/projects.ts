@@ -21,7 +21,7 @@ const C = {
   obra1:  '1504307651254-35680f356dfd', // canteiro de obras com trabalhadores
   obra2:  '1541888946425-d81bb19240f5', // estrutura de concreto em construção
   pred1:  '1486325212027-8081e485255e', // fachada de prédio comercial moderno
-  pred2:  '1590012314631-9b2a5a45d54b', // edifício comercial noturno
+  pred2:  '1541888946425-d81bb19240f5', // estrutura de concreto em construção (confirmado)
   casa1:  '1570129477492-45c003edd2be', // residência moderna, fachada externa
   casa2:  '1523217582562-09d0def993a6', // casa com jardim
   escrit: '1497366216548-37526070297c', // interior de escritório reformado
