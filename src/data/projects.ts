@@ -16,6 +16,18 @@ export interface Project {
 const UNS = (id: string, w = 1400) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
+// IDs verificados manualmente no Unsplash — todos construção/arquitetura
+const C = {
+  obra1:  '1504307651254-35680f356dfd', // canteiro de obras com trabalhadores
+  obra2:  '1541888946425-d81bb19240f5', // estrutura de concreto em construção
+  pred1:  '1486325212027-8081e485255e', // fachada de prédio comercial moderno
+  pred2:  '1590012314631-9b2a5a45d54b', // edifício comercial noturno
+  casa1:  '1570129477492-45c003edd2be', // residência moderna, fachada externa
+  casa2:  '1523217582562-09d0def993a6', // casa com jardim
+  escrit: '1497366216548-37526070297c', // interior de escritório reformado
+  galpao: '1504328345606-18bbc8c9d7d1', // galpão industrial / warehouse
+}
+
 export const PROJECTS: Record<string, Project> = {
   cartorio: {
     title: 'Cartório do Registro de Imóveis',
@@ -28,8 +40,8 @@ export const PROJECTS: Record<string, Project> = {
     desc: 'A PH executou a reforma completa do Cartório do Registro de Imóveis em Palmas, atualizando layout, instalações e acabamentos para receber um volume maior de atendimento diário.',
     desc2: 'A obra exigiu organização de etapas e prazos rigorosos para que o expediente do cartório não fosse interrompido em momento algum — cada frente foi planejada em conjunto com a administração do espaço.',
     check: ['Reforma de layout interno', 'Instalações elétricas atualizadas', 'Hidráulica revisada', 'Porcelanatos em área de atendimento', 'Pintura interna completa', 'Acabamento institucional'],
-    heroImage: UNS('1497366216548-37526070297c'),
-    gallery: [UNS('1497366216548-37526070297c', 600), UNS('1556909114-f6e7ad7d3136', 600), UNS('1563453392212-326f5e854473', 600)],
+    heroImage: UNS(C.escrit),
+    gallery: [UNS(C.escrit, 600), UNS(C.obra1, 600), UNS(C.obra2, 600)],
   },
   amazonas: {
     title: 'Amazonas Center',
@@ -42,8 +54,8 @@ export const PROJECTS: Record<string, Project> = {
     desc: 'O Amazonas Center foi uma das obras de maior escala assinadas pela PH em Palmas, reunindo lojas, circulação pública e áreas técnicas em um único complexo comercial.',
     desc2: 'A construção demandou coordenação de equipes em paralelo — estrutura, alvenaria, instalações, fachada e acabamento — com cronograma firme e entregas parciais alinhadas com lojistas e administração.',
     check: ['Estrutura e alvenaria', 'Instalações elétricas e hidráulicas', 'Pisos em porcelanato', 'Pintura interna e externa', 'Acabamento de fachada', 'Coordenação de obra'],
-    heroImage: UNS('1486325212027-8081e485255e'),
-    gallery: [UNS('1486325212027-8081e485255e', 600), UNS('1541888946425-d81bb19240f5', 600), UNS('1504307651254-35680f356dfd', 600)],
+    heroImage: UNS(C.pred1),
+    gallery: [UNS(C.pred1, 600), UNS(C.obra2, 600), UNS(C.obra1, 600)],
   },
   cooperativa: {
     title: 'Cooperativa dos Enfermeiros',
@@ -56,8 +68,8 @@ export const PROJECTS: Record<string, Project> = {
     desc: 'A PH construiu a sede da Cooperativa dos Enfermeiros em uma localização estratégica em Palmas — em frente à Unimed — com padrão institucional e acabamento condizente com o porte da entidade.',
     desc2: 'O projeto exigiu cuidado especial com a fachada e a circulação interna, já que a sede recebe diariamente cooperados, parceiros e visitantes.',
     check: ['Construção completa do zero', 'Estrutura armada', 'Fachada institucional', 'Instalações elétricas e hidráulicas', 'Acabamentos em porcelanato', 'Pintura interna e externa'],
-    heroImage: UNS('1582407947304-fd86f28320c7'),
-    gallery: [UNS('1582407947304-fd86f28320c7', 600), UNS('1497366216548-37526070297c', 600), UNS('1556909114-f6e7ad7d3136', 600)],
+    heroImage: UNS(C.pred2),
+    gallery: [UNS(C.pred2, 600), UNS(C.escrit, 600), UNS(C.obra1, 600)],
   },
   residencial: {
     title: 'Obra Residencial – Palmas',
@@ -70,8 +82,8 @@ export const PROJECTS: Record<string, Project> = {
     desc: 'Projeto residencial entregue chave em mão em Palmas, desenhado com atenção ao terreno, à luz natural e ao programa da família.',
     desc2: 'A obra passou pelas etapas de fundação, estrutura, alvenaria, instalações e acabamento, sempre com acompanhamento direto do Paulo na obra.',
     check: ['Fundação e estrutura', 'Alvenaria completa', 'Hidráulica e elétrica', 'Instalação de porcelanato', 'Pintura interna e externa', 'Acabamento residencial'],
-    heroImage: UNS('1570129477492-45c003edd2be'),
-    gallery: [UNS('1570129477492-45c003edd2be', 600), UNS('1558618047-3d45a6f8cd3a', 600), UNS('1504307651254-35680f356dfd', 600)],
+    heroImage: UNS(C.casa1),
+    gallery: [UNS(C.casa1, 600), UNS(C.casa2, 600), UNS(C.obra1, 600)],
   },
   comercial: {
     title: 'Reforma Comercial',
@@ -84,8 +96,8 @@ export const PROJECTS: Record<string, Project> = {
     desc: 'Reforma comercial completa em ponto já em operação, com troca de pisos, atualização de elétrica e nova pintura.',
     desc2: 'A escolha por etapas planejadas evitou interrupção longa do funcionamento do estabelecimento.',
     check: ['Demolição controlada', 'Nova elétrica', 'Instalação de porcelanato', 'Pintura interna', 'Acabamento comercial', 'Limpeza fina e entrega'],
-    heroImage: UNS('1556909114-f6e7ad7d3136'),
-    gallery: [UNS('1556909114-f6e7ad7d3136', 600), UNS('1563453392212-326f5e854473', 600), UNS('1497366216548-37526070297c', 600)],
+    heroImage: UNS(C.pred1),
+    gallery: [UNS(C.pred1, 600), UNS(C.escrit, 600), UNS(C.obra2, 600)],
   },
   industrial: {
     title: 'Construção Industrial',
@@ -98,8 +110,8 @@ export const PROJECTS: Record<string, Project> = {
     desc: 'Galpão construído do zero, com estrutura metálica, alvenaria, piso industrial e instalações dimensionadas para operação.',
     desc2: 'A obra foi planejada para receber equipamentos de produção e logística desde o primeiro dia de funcionamento.',
     check: ['Fundação reforçada', 'Estrutura metálica', 'Piso industrial', 'Elétrica de alta carga', 'Hidráulica industrial', 'Acabamento e fachada'],
-    heroImage: UNS('1504328345606-18bbc8c9d7d1'),
-    gallery: [UNS('1504328345606-18bbc8c9d7d1', 600), UNS('1541888946425-d81bb19240f5', 600), UNS('1504307651254-35680f356dfd', 600)],
+    heroImage: UNS(C.galpao),
+    gallery: [UNS(C.galpao, 600), UNS(C.obra2, 600), UNS(C.obra1, 600)],
   },
 }
 
