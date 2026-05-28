@@ -124,7 +124,7 @@ export default function Navbar() {
         {/* Drawer header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 24px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
           <a href="#top" onClick={close} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src={logo} alt="PH Construtora" style={{ height: '38px', width: 'auto', display: 'block', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+            <img src={logo} alt="PH Construtora" style={{ height: '48px', width: 'auto', display: 'block', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
           </a>
           <button
             onClick={close}
@@ -202,7 +202,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#top" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
-            <img src={logo} alt="PH Construtora" style={{ height: '44px', width: 'auto', display: 'block', objectFit: 'contain' }} />
+            <img src={logo} alt="PH Construtora" style={{ height: '56px', width: 'auto', display: 'block', objectFit: 'contain' }} />
           </a>
 
           {/* Desktop nav (centered) */}

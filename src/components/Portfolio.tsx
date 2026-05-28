@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { PROJECT_KEYS, PROJECT_LABELS } from '../data/projects'
+import { PROJECTS, PROJECT_KEYS, PROJECT_LABELS } from '../data/projects'
 
 interface Props {
   onOpen: (key: string) => void
@@ -26,7 +26,11 @@ export default function Portfolio({ onOpen }: Props) {
                 className="relative aspect-[4/3] overflow-hidden bg-ph-grey cursor-pointer group"
                 onClick={() => onOpen(key)}
               >
-                {/* FOTO: imagem da obra correspondente */}
+                <img
+                  src={PROJECTS[key].heroImage}
+                  alt={title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-blue-ph/[.85] flex flex-col items-center justify-center px-6 text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-8 h-0.5 bg-gold mb-[18px]" />
                   <div className="text-[22px] font-bold tracking-[-0.005em] mb-1.5 leading-[1.2]">{title}</div>

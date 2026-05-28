@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import heroBg from '../assets/large-building-site.jpg'
 
 export default function Hero() {
   return (
@@ -35,10 +36,15 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Media placeholder */}
-          <div className="relative aspect-[4/5] bg-ph-grey rounded-[2px]">
-            {/* FOTO: fachada de obra ou equipe PH Construtora */}
-            <div className="absolute left-6 bottom-6 bg-white p-4 shadow-[0_10px_30px_rgba(17,17,17,.12)] flex gap-[14px] items-center rounded-[4px]">
+          {/* Hero image */}
+          <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden">
+            <img
+              src={heroBg}
+              alt="Obra PH Construtora"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Badge */}
+            <div className="absolute left-6 bottom-6 bg-white p-4 shadow-[0_10px_30px_rgba(17,17,17,.18)] flex gap-[14px] items-center rounded-[4px]">
               <div className="w-9 h-9 rounded-full border-2 border-gold flex items-center justify-center text-blue-ph font-extrabold text-[13px]">
                 PH
               </div>

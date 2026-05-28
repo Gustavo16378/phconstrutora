@@ -72,7 +72,7 @@ export default function PortfolioModal({ projectKey, onClose }: Props) {
 
             {/* Hero image */}
             <div className="relative aspect-video bg-ph-grey overflow-hidden">
-              {/* FOTO: imagem principal da obra */}
+              <img src={project.heroImage} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(13,13,13,.65)] to-transparent" />
               <div className="absolute left-9 right-9 bottom-8 text-white z-[2] md:left-9 md:right-9 left-5 right-5 bottom-5">
                 <span className="inline-flex items-center gap-[14px] text-[11px] tracking-[0.26em] uppercase text-white font-semibold mb-[18px] px-[14px] py-2 bg-blue-ph">
@@ -114,13 +114,10 @@ export default function PortfolioModal({ projectKey, onClose }: Props) {
 
               {/* Gallery */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-14">
-                {[0, 1, 2].map((i) => (
-                  <div
-                    key={i}
-                    className="aspect-square"
-                    style={{ background: i === 0 ? '#AAAAAA' : i === 1 ? '#6E7480' : '#888' }}
-                    aria-label={`FOTO: galeria ${i + 1} da obra`}
-                  />
+                {project.gallery.map((src, i) => (
+                  <div key={i} className="aspect-square overflow-hidden bg-ph-grey">
+                    <img src={src} alt={`${project.title} — foto ${i + 1}`} className="w-full h-full object-cover" />
+                  </div>
                 ))}
               </div>
 

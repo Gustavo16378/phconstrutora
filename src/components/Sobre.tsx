@@ -28,10 +28,14 @@ export default function Sobre() {
             </div>
           </div>
 
-          {/* Photo placeholder */}
-          <div className="relative aspect-[4/5] bg-ph-grey">
-            {/* FOTO: fundador Paulo ou obra emblemática */}
-            <div className="absolute right-[-16px] top-[-16px] bg-gold text-ink px-[22px] py-[18px] font-extrabold text-[13px] tracking-[0.18em] uppercase rounded-[4px]">
+          {/* Photo */}
+          <div className="relative aspect-[4/5] overflow-hidden bg-ph-grey">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+              alt="Paulo – Fundador PH Construtora"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute right-[-16px] top-[-16px] bg-gold text-ink px-[22px] py-[18px] font-extrabold text-[13px] tracking-[0.18em] uppercase rounded-[4px] z-10">
               Desde 2018
             </div>
           </div>
